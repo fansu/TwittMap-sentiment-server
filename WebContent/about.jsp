@@ -52,6 +52,8 @@
   <h3>Team Member</h3>
   <p>Fan Su      (fs2488)</p>
   <p>Jingyi  Guo   (jg3421)</p>
+  <p>Wei Cao     (wc2467)</p>
+  <p>Shijie Hu    (sh3251)</p>
   <h3>website for demo</h3>
   <a href="http://twittapp-env.elasticbeanstalk.com/index.jsp">http://twittapp-env.elasticbeanstalk.com/index.jsp</a>
   <h3>Internal Design</h3>
