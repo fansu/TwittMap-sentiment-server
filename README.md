@@ -4,6 +4,8 @@ Team Member
 -----------
 Fan Su		 	(fs2488)
 Jingyi	Guo		(jg3421)
+Wei Cao         (wc2467)
+Shijie Hu       (sh3251)
 
 website for demo
 -----------------
