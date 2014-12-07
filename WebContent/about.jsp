@@ -61,14 +61,14 @@
 	<div>2. Display twitts' location based on time range filter</div>
 	<div>3. Color gradient and density map display for twitts on map based on location</div>
 	<div>4. Real time twitts location display </div>
-	<div>5. SQS and SNS in transmitting data from Twitter API to front-end</div>
-	<div>6. Sentiment Analysis of Twitter DATA using alchemyapi</div>
+	<div>5. Sentiment Analysis for text acquired from Twitt API, and real-time display how many positve, neutral, negative text up to now</div>
+    <div>6. Worker in acquiring data from queue, and analyze text</div>
   </p>
   <h4>Tools used:</h4>
     <div>1. Web server: Tomcat 7.0 on AWS Elastic Beanstalk</div>
     <div>2. Database: Apache Cassandra on AWS EC2</div>
-    <div>3. API: Twitter Live and Streaming API, Google Map API,Elastic Beanstalk,Elastic LoadBalancing</div>
-    <div>4. Amazon SQS, SNS service</div>
+    <div>3. API: Twitter Live and Streaming API, Google Map API, Elastic Beanstalk, Elastic LoadBalancing</div>
+    <div>4. Amazon SQS, SNS service and sentiment analysis API alchemyapi</div>
   <h4>Steps to use without installing source code:</h4>
 	<div>1. Go to page http://twittapp-env.elasticbeanstalk.com/</div>
 	<div>2. 'Main' will show main feature with locations of twitts, keywords filtering in dropdown, time range filtering</div>
