@@ -134,8 +134,7 @@ public class Servlet extends HttpServlet {
 											//		sqs.sendMessage(new SendMessageRequest(myQueueUrl, "'" + keywords + "', "+ t.getId() + ", '" + text + "', " + date.getTime() + "," + t.getCreatedAt().getTime() + ", " + obj2.get("lat") + ", " + obj2.get("lon")));
 													String q2 = "INSERT INTO twitt_all (keywords, id, content, createddate, date, latitude, longitude) VALUES (" + "'" + keywords + "', "+ t.getId() + ", '" + text + "', " + date.getTime() + "," + t.getCreatedAt().getTime() + ", " + obj2.get("lat") + ", " + obj2.get("lon") + ");";
 													session.execute(q2);
-													sqs.sendMessage(new SendMessageRequest("", keywords + "::"+ t.getId() + "::" + text + "::" + date.getTime() + "::" + t.getCreatedAt().getTime() + "::" + obj2.get("lat") + "::" + obj2.get("lon")));
-												
+													sqs.sendMessage(new SendMessageRequest("", keywords + "::"+ t.getId() + "::" + text + "::" + date.getTime() + "::" + t.getCreatedAt().getTime() + "::" + obj2.get("lat") + "::" + obj2.get("lon")));										
 												}
 											}
 										}
@@ -219,29 +218,9 @@ public class Servlet extends HttpServlet {
     		
 		String messageReceiptHandle = ms.get(0).getReceiptHandle();
 		sqs.deleteMessage(new DeleteMessageRequest()
-		    .withQueueUrl("")
-		    .withReceiptHandle(messageReceiptHandle));
-        
-    	
- /*   	Cluster cluster;
-    	Session c_session;
-    	cluster = Cluster.builder().withLoadBalancingPolicy(new DCAwareRoundRobinPolicy("")).addContactPoint("").build();
-    	Metadata metadata = cluster.getMetadata();
-    	String query = "SELECT * FROM twitt where keywords= '" + keywords + "' limit 5 allow filtering;";
-    	c_session = cluster.connect("demo"); 
-    	ResultSet results = c_session.execute(query + ";");
-    	
-    	find_count = 0;
-    	for (Row row : results) {
-    		if (find_count == 5)
-    			break;
-    		Double[] tmp = new Double[2];
-    		tmp[0] = row.getDouble("latitude");
-    		tmp[1] = row.getDouble("longitude");
-    		locations.add(tmp);
-    		find_count++;
-    	}
-    	*/
+	        .withQueueUrl("")
+	        .withReceiptHandle(messageReceiptHandle));
+       
     	Gson gson = new Gson();
     	String json =gson.toJson(locations);
         response.setContentType("application/json");

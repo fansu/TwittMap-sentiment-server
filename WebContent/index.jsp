@@ -225,6 +225,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
       <ul class="nav navbar-nav">
         <li class="active"><a href="/index">Main</a></li>
         <li><a href="/real-time">Real-time</a></li>
+        <li><a href="/sentiment">Sentiment</a></li>
         <li><a href="/about">About</a></li>
       </ul>
     </div>

@@ -134,16 +134,6 @@ function initialize() {
 		var data_spl = data_s.split(',');
 		var lat = data_spl[0];
 		var lon = data_spl[1];
-		var sentiment = data_spl[2];
-		if (sentiment == 1)
-			pos_num++;
-		else if (sentiment == 0)
-			net_num++;
-		else if (sentiment == -1)
-			neg_num++;
-		document.getElementById("pos_show").innerHTML = pos_num;
-		document.getElementById("net_show").innerHTML = net_num;
-		document.getElementById("neg_show").innerHTML = neg_num;
 		
 		var taxiData = [
           new google.maps.LatLng(lat, lon)];
@@ -214,6 +204,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
       <ul class="nav navbar-nav">
         <li><a href="/index">Main</a></li>
         <li class="active"><a href="/real-time">Real-time</a></li>
+        <li><a href="/sentiment">Sentiment</a></li>
         <li><a href="/about">About</a></li>
       </ul>
     </div>
@@ -231,9 +222,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
    </div>
    <div class="col-md-6"></div>
   </div>
-  The number of positive words is <div id="pos_show"></div>
-  The number of netural words is <div id="net_show"></div>
-  The number of negative words is <div id="neg_show"></div>
   <div id="map-canvas" class="span4, text-center"></div>
 </body>
 </html>

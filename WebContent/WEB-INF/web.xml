@@ -18,6 +18,14 @@
     <url-pattern>/real-time</url-pattern>
   </servlet-mapping>
   <servlet>
+    <servlet-name>sentiment</servlet-name>
+    <jsp-file>/sentiment.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sentiment</servlet-name>
+    <url-pattern>/sentiment</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>about</servlet-name>
     <jsp-file>/about.jsp</jsp-file>
   </servlet>
